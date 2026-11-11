@@ -2,24 +2,27 @@
 
 ## 当前状态
 
-- 已交付可在本机及局域网访问的首版原型，等待实际教学试用反馈。
-- GitHub 仓库与 GitHub Pages 发布进行中：已初始化本地 `main`，准备自动发布工作流及 Codespaces 配置；账号 `Skyfei996` 的本机 CLI 凭据已失效，等待重新登录后创建仓库、推送并核对线上地址。尚未创建远端仓库或完成线上发布。
+- 首版原型已在 GitHub Pages 公开上线，也可本地及局域网运行，等待实际教学试用反馈。演示与源码入口见 `README.md`。
+- GitHub 公开仓库已建立，本地 `main` 已关联 `origin/main`；推送后自动检查、测试、构建与发布。CLI 已登录账号 `Skyfei996`，凭据存入 Windows 凭据库。
+- 手机浏览器编辑入口及 Codespaces 配置已提供；Codespaces 环境创建和手机编程完整流程尚未实际验证。
 - 手机真机触摸、低端机性能及 iOS Safari 兼容性待验证；当前已完成 360／390 像素视口布局检查。
 
 ## 最近完成
 
+- 2026-11-11 21:34 按授权公开源码并推送至 `Skyfei996/fangjian-spatial-lab`，启用 GitHub Actions 发布源与 HTTPS，完成 GitHub Pages 首次部署；补齐演示、源码、手机编辑和 Codespaces 入口。发布记录见最近验证。
 - 2026-11-11 21:15 准备 GitHub Pages 自动检查、测试、构建与部署工作流，以及 Node.js 24 Codespaces 配置；将依赖锁文件中的 74 个公司内部下载地址改为公共 npm 地址，保留全部依赖版本与完整性校验值。发布与手机编程说明见 `README.md`。
 - 2026-11-11 18:11 完成自由搭建、六个标准方向、三视图联动与关联高亮、两道可作答练习、三步遮挡讲解、浏览器保存及 JSON 导入导出；补充手机底部工具面板和项目文档。使用入口见 `README.md`。
 
 ## 最近验证
 
-- 2026-11-11 21:15 类型检查、11 项几何及判题测试、`/fangjian-spatial-lab/` 子路径生产构建通过；在 `.tmp/github-pages/` 中通过公共 npm 全新安装后构建通过，并核对 HTML 的 JS、CSS 地址均对应实际文件。工作流引用的 5 个官方 Action 固定提交均可读取，Codespaces JSON 解析通过；GitHub Actions 实际运行、Codespaces 启动及线上访问尚待验证。原有 JS 包体积提示仍存在。
+- 2026-11-11 21:34 [首次 Pages 工作流](https://github.com/Skyfei996/fangjian-spatial-lab/actions/runs/43030154458) 的构建及部署均成功，云端依赖安装、类型检查、11 项测试和生产构建通过；线上首页、JS、CSS 均返回 HTTP 200，首页标题及子路径资源引用正确。Pages 配置回读确认发布源为工作流且强制 HTTPS。未重新进行线上浏览器渲染或真机触摸检查。
+- 2026-11-11 21:15 类型检查、11 项几何及判题测试、`/fangjian-spatial-lab/` 子路径生产构建通过；在 `.tmp/github-pages/` 中通过公共 npm 全新安装后构建通过，并核对 HTML 的 JS、CSS 地址均对应实际文件。工作流引用的 5 个官方 Action 固定提交均可读取，Codespaces JSON 解析通过；Codespaces 启动尚待验证。原有 JS 包体积提示仍存在。
 - 2026-11-11 18:11 最终 `npm run build` 通过，包含 TypeScript 类型检查与 Vite 生产构建。单个 JS 包约 584 KB，gzip 约 157 KB；存在构建体积提示，不影响构建完成。
 - 2026-11-11 18:11 `npm test` 的 11 项测试通过，覆盖前后遮挡、方向约定、拱门空洞、空模型、增加方块的正确／错误／重复记录路径，以及导入数据边界。
 - 2026-11-11 18:11 浏览器实际操作确认加块与三视图同步、撤销、画正面的正确及错误反馈、增加一块保持左视图的正确反馈、讲解关联高亮、保存后刷新恢复；桌面、390 像素手机布局及 360 像素无横向溢出检查通过，手机工具面板与预设切换可用。运行错误日志为空。
 - 2026-11-11 18:11 本地及当前局域网地址返回 HTTP 200，已保留浏览器预览与开发服务，供继续体验。实际跨设备访问尚未验证。
 
-记录时间为北京时间。Git Bash 的 `TZ=Asia/Shanghai date` 受沙箱限制无法执行，以 Windows `China Standard Time` 时区转换获取。
+记录时间为北京时间。Git Bash 的 `TZ=Asia/Shanghai date` 在当前 Windows 环境受沙箱及其时区支持限制，以 Windows `China Standard Time` 时区转换获取。
 
 ## 后续方向
 

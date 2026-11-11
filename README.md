@@ -2,6 +2,10 @@
 
 用于亲子数学教学的响应式 3D 方块工作台。使用 TypeScript、Three.js 和 Vite，数据保存在当前浏览器，没有账号或云端同步。
 
+- 在线体验：[方见 · 空间思维实验室](https://skyfei996.github.io/fangjian-spatial-lab/) 。
+- 公开源码：[GitHub 仓库](https://github.com/Skyfei996/fangjian-spatial-lab) 。
+- 手机编辑：[浏览器代码编辑器](https://github.dev/Skyfei996/fangjian-spatial-lab) 。
+
 ## 启动
 
 需要 Node.js 22.12 及以上版本；本版使用 Node.js 24 验证。
@@ -41,7 +45,7 @@ npm run build
 
 ## GitHub Pages 发布
 
-在 GitHub 仓库的 Settings → Pages 中，将 Source 设置为 GitHub Actions。推送到 `main` 后，`.github/workflows/deploy.yml` 自动安装依赖、检查类型、运行测试、构建并发布；也可以在 Actions 中手动执行。发布只使用 GitHub 内置的临时授权，无须保存个人 token 到仓库。
+仓库已启用 GitHub Actions 作为 Pages 发布源。推送到 `main` 后，`.github/workflows/deploy.yml` 自动安装依赖、检查类型、运行测试、构建并发布；也可以在 [Actions](https://github.com/Skyfei996/fangjian-spatial-lab/actions) 中手动执行。发布只使用 GitHub 内置的临时授权，无须保存个人 token 到仓库。
 
 构建会按仓库名设置资源路径，适用于 `https://<用户名>.github.io/<仓库名>/` 形式的项目站点。本地模拟该路径的命令为：
 
@@ -51,6 +55,6 @@ npm run build -- --base=/fangjian-spatial-lab/
 
 ## 手机编程
 
-手机浏览器可打开 `https://github.dev/<用户名>/<仓库名>` 编辑和提交文件；需要终端、测试或运行预览时，在仓库的 Code → Codespaces 中创建开发环境。本项目的 `.devcontainer/devcontainer.json` 提供 Node.js 24、自动安装依赖并转发预览端口；环境创建后运行 `npm run dev`，从端口面板打开 5173。
+手机浏览器可打开 [github.dev 编辑器](https://github.dev/Skyfei996/fangjian-spatial-lab) 编辑和提交文件；需要终端、测试或运行预览时，在仓库的 Code → Codespaces 中创建开发环境，也可以打开 [Codespaces 创建入口](https://codespaces.new/Skyfei996/fangjian-spatial-lab) 。本项目的 `.devcontainer/devcontainer.json` 提供 Node.js 24、自动安装依赖并转发预览端口；环境创建后运行 `npm run dev`，从端口面板打开 5173。
 
 Codespaces 的使用受 GitHub 账号额度及计费设置限制。手机编辑后提交到 `main`，即可触发 Pages 更新。作品仍保存在各自浏览器中，发布网站不会同步模型数据。
